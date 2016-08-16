@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Peter's JavaScript Application</title>
+
+    <script src="PeterScripts.js"> </script>
+    <style>
+            .mijntabel
+            {
+            border-style : solid;
+            }
+
+            .celGeenPriem
+             {
+                border-style : solid;
+                padding: 1em;
+                background: white;
+             }
+
+            .celPriem
+            {
+                border-style : solid;
+                padding: 1em;
+                background: red;
+            }
+
+
+
+     </style>
+</head>
+
+<body>
+
+ <H1> JavaScript Application</H1>
+ <p>Dit is mijn eerste JavaScript App</p>
+
+
+
+ <script>
+     var i = 4;
+     var j = 5;
+     var som = i + j;
+     document.writeln("Som is: "+ som );
+
+     console.log("Dit gaat naar de console, niet naar de browser");
+
+     // document.writeln("Is getal"+ 5 +" een priemgetal "+isPrime(5)+"<BR>");
+     // document.writeln("Is getal"+ 6 +" een priemgetal "+isPrime(6)+"<BR>");
+     // document.writeln("Is getal"+ 7 +" een priemgetal "+isPrime(7)+"<BR>");
+
+
+
+
+     var totaal = 100;
+     var rijlengte = 10;
+
+     var totaalteller = 1;
+     document.writeln('<TABLE class="mijntabel" bgcolor="blue">');
+     while (totaalteller <= totaal)
+     {
+         var rijteller = 1;
+         /* if (totaal % rijlengte !== 0)
+         {
+             rijlengte = totaal % rijlengte;
+         }
+         */
+         document.writeln("<TR>");
+         while (rijteller <= rijlengte)
+         {
+             if (isPrime(totaalteller))
+             {
+                 document.writeln('<TD class="celPriem">' + totaalteller + '</TD>');
+                 console.log("Priemgetal !:" + totaalteller);
+             }
+             else
+             {
+                 document.writeln('<TD class="celGeenPriem">' + totaalteller + '</TD>');
+             }
+
+             rijteller++;
+             totaalteller++;
+         }
+         document.writeln("</TR>");
+     }
+     document.writeln("</TABLE>");
+
+ </script>
+
+<!-- <input type="button" value="Klik hier" onclick="showDate()"> -->
+
+</body>
+</html>
